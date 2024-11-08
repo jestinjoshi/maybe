@@ -100,7 +100,7 @@
         </div>
         <%=
           button_to t(".delete_account"), user_path(@user), method: :delete,
-            class: "bg-red-500 text-white text-sm font-medium rounded-lg px-3 py-2",
+            class: "bg-red-500 hover:bg-red-300 text-white text-sm font-medium rounded-lg px-3 py-2",
             data: { turbo_confirm: {
               title: t(".confirm_delete.title"),
               body: t(".confirm_delete.body"),
