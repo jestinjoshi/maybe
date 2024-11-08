@@ -22,7 +22,7 @@ class StyledFormBuilder < ActionView::Helpers::FormBuilder
   end
 
   def select(method, choices, options = {}, html_options = {})
-    merged_html_options = { class: "form-field__input" }.merge(html_options)
+    merged_html_options = { class: "form-field__input scrollbar" }.merge(html_options)
 
     label = build_label(method, options.merge(required: merged_html_options[:required]))
     field = super(method, choices, options, merged_html_options)

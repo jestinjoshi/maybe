@@ -1,6 +1,6 @@
 <%= content_for :content do %>
   <div class="flex h-full bg-gray-25">
-    <div class="p-6 pb-20 w-[368px] shrink-0 h-full overflow-y-auto">
+    <div class="p-6 pb-20 w-[368px] shrink-0 h-full overflow-y-auto scrollbar">
       <% if content_for?(:sidebar) %>
         <%= yield :sidebar %>
       <% else %>
@@ -8,7 +8,7 @@
       <% end %>
     </div>
 
-    <main class="grow px-20 py-6 h-full <%= require_upgrade? ? "relative overflow-hidden" : "overflow-y-auto" %>">
+    <main class="grow px-20 py-6 h-full scrollbar <%= require_upgrade? ? "relative overflow-hidden" : "overflow-y-auto" %>">
       <% if require_upgrade? %>
         <%= render "shared/subscribe_modal" %>
       <% end %>
